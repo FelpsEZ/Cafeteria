@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Shalom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lanchonete Shalom</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#noite-tematica">Noite Temática</a></li>
+                <li><a href="#pedido-final">Pedido Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="banner">
+            <h2>Bem-vindo à Lanchonete Shalom!</h2>
+            <p>Sabor e acolhimento em cada mordida!</p>
+            <a class="button" href="#menu">Peça Agora</a>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Shalom, acreditamos que uma boa refeição pode transformar o dia de alguém. Desde 82, servimos pratos saborosos em um ambiente acolhedor.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="menu-container">
+                <ul>
+                    <li>
+                        <input type="checkbox" id="item1" value="15.00" onchange="updateTotal()">
+                        <label for="item1"><strong>Pedido 01</strong> - R$ 15,00</label>
+                        <div class="menu-details">Suculento hambúrguer com queijo, alface, tomate e nosso molho especial.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item2" value="10.00" onchange="updateTotal()">
+                        <label for="item2"><strong>Pedido 02</strong> - R$ 10,00</label>
+                        <div class="menu-details">Acompanhamento perfeito para qualquer lanche.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item3" value="5.00" onchange="updateTotal()">
+                        <label for="item3"><strong>Pedido 03</strong> - R$ 5,00</label>
+                        <div class="menu-details">Refrescante e feito na hora.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item4" value="12.00" onchange="updateTotal()">
+                        <label for="item4"><strong>Pedido 04</strong> - R$ 12,00</label>
+                        <div class="menu-details">Hambúrguer com queijo, alface, tomate e cebola.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item5" value="14.00" onchange="updateTotal()">
+                        <label for="item5"><strong>Pedido 05</strong> - R$ 14,00</label>
+                        <div class="menu-details">Delicioso hambúrguer com bacon crocante e queijo.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item6" value="13.00" onchange="updateTotal()">
+                        <label for="item6"><strong>Pedido 06</strong> - R$ 13,00</label>
+                        <div class="menu-details">Frango grelhado com queijo, alface e molho especial.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item7" value="8.00" onchange="updateTotal()">
+                        <label for="item7"><strong>Pedido 07</strong> - R$ 8,00</label>
+                        <div class="menu-details">Salsicha especial com molhos variados.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item8" value="9.00" onchange="updateTotal()">
+                        <label for="item8"><strong>Pedido 08</strong> - R$ 9,00</label>
+                        <div class="menu-details">Batatas assadas com temperos especiais.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item9" value="11.00" onchange="updateTotal()">
+                        <label for="item9"><strong>Pedido 09</strong> - R$ 11,00</label>
+                        <div class="menu-details">Folhas verdes, croutons e molho caesar.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item10" value="12.00" onchange="updateTotal()">
+                        <label for="item10"><strong>Pedido 10</strong> - R$ 12,00</label>
+                        <div class="menu-details">Pernil desfiado com molho barbecue.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item11" value="15.00" onchange="updateTotal()">
+                        <label for="item11"><strong>Pedido 11</strong> - R$ 15,00</label>
+                        <div class="menu-details">Frango grelhado envolto em wrap com salada.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item12" value="20.00" onchange="updateTotal()">
+                        <label for="item12"><strong>Pedido 12</strong> - R$ 20,00</label>
+                        <div class="menu-details">Mini pizza de mussarela ou calabresa.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item13" value="18.00" onchange="updateTotal()">
+                        <label for="item13"><strong>Pedido 13</strong> - R$ 18,00</label>
+                        <div class="menu-details">Massas com alho e azeite.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item14" value="22.00" onchange="updateTotal()">
+                        <label for="item14"><strong>Pedido 14</strong> - R$ 22,00</label>
+                        <div class="menu-details">Cremoso risoto com frango e ervilhas.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item15" value="10.00" onchange="updateTotal()">
+                        <label for="item15"><strong>Pedido 15</strong> - R$ 10,00</label>
+                        <div class="menu-details">Quibe recheado com carne e especiarias.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item16" value="9.00" onchange="updateTotal()">
+                        <label for="item16"><strong>Pedido 16</strong> - R$ 9,00</label>
+                        <div class="menu-details">Deliciosas empanadas recheadas.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item17" value="7.00" onchange="updateTotal()">
+                        <label for="item17"><strong>Pedido 17</strong> - R$ 7,00</label>
+                        <div class="menu-details">Diversos sabores para refrescar.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item18" value="12.00" onchange="updateTotal()">
+                        <label for="item18"><strong>Pedido 18</strong> - R$ 12,00</label>
+                        <div class="menu-details">Cremoso e delicioso.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item19" value="10.00" onchange="updateTotal()">
+                        <label for="item19"><strong>Pedido 19</strong> - R$ 10,00</label>
+                        <div class="menu-details">Crepe recheado com nutella e frutas.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item20" value="5.00" onchange="updateTotal()">
+                        <label for="item20"><strong>Pedido 20</strong> - R$ 5,00</label>
+                        <div class="menu-details">Café fresco e aromático.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item21" value="6.00" onchange="updateTotal()">
+                        <label for="item21"><strong>Pedido 21</strong> - R$ 6,00</label>
+                        <div class="menu-details">Refrescante e perfeito para o calor.</div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item22" value="8.00" onchange="updateTotal()">
+                        <label for="item22"><strong>Pedido 22</strong> - R$ 8,00</label>
+                        <div class="menu-details">Bolo caseiro de cenoura com cobertura de chocolate.</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="noite-tematica">
+            <h2>Noite Temática</h2>
+            <p>Participe das nossas noites temáticas todas as sextas-feiras! Cada semana traz um tema diferente, com pratos especiais, música ao vivo e decoração personalizada. Venha se divertir com amigos e familiares!</p>
+            <ul>
+                <li>
+                    <input type="checkbox" id="noite-italiana" value="30.00" onchange="updateTotal()">
+                    <label for="noite-italiana"><strong>Noite Italiana</strong> - R$ 30,00</label>
+                    <div class="menu-details">Delícias da culinária italiana com massas e pizzas.</div>
+                </li>
+                <li>
+                    <input type="checkbox" id="noite-mexicana" value="35.00" onchange="updateTotal()">
+                    <label for="noite-mexicana"><strong>Noite Mexicana</strong> - R$ 35,00</label>
+                    <div class="menu-details">Sabores picantes e margaritas refrescantes.</div>
+                </li>
+                <li>
+                    <input type="checkbox" id="noite-burguer" value="25.00" onchange="updateTotal()">
+                    <label for="noite-burguer"><strong>Noite de Burguer</strong> - R$ 25,00</label>
+                    <div class="menu-details">Personalize seu hambúrguer como quiser!</div>
+                </li>
+            </ul>
+            <p>Faça sua reserva e não perca essa experiência incrível!</p>
+        </section>
+
+        <section id="pedido-final">
+            <h2>Pedido Final</h2>
+            <form id="pedidoForm" onsubmit="finalizarPedido(event)">
+                <label for="nome">Nome do Cliente:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                
+                <label for="valor">Valor Total:</label>
+                <input type="text" id="valor" name="valor" required placeholder="R$ 0,00" readonly>
+
+                <label for="pagamento">Método de Pagamento:</label>
+                <select id="pagamento" name="pagamento" required>
+                    <option value="">Selecione</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="pix">PIX</option>
+                </select>
+
+                <button type="submit">Finalizar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Lanchonete Shalom.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
